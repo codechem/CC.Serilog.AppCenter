@@ -30,9 +30,9 @@ namespace CC.Serilog.AppCenter
                 { "message", logEvent.RenderMessage() }
             };
 
-            foreach (var (key, value) in logEvent.Properties)
+            foreach (var property in logEvent.Properties)
             {
-                properties.Add(key, value.ToString());
+                properties.Add(property.Key, property.Value.ToString());
             }
 
             var exception = logEvent.Exception ?? new Exception(logEvent.Properties["0"].ToString());

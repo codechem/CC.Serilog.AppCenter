@@ -3,7 +3,7 @@
     <metadata>
         <id>CC.Serilog.AppCenter</id>
         <title>CC.Serilog.AppCenter</title>
-        <version>1.0.0</version>
+        <version>1.0.2</version>
         <authors>Lazar Nikolov</authors>
         <owners>CodeChem</owners>
         <license type="expression">MIT</license>
@@ -22,6 +22,6 @@
         </dependencies>
     </metadata>
     <files>
-        <file src="bin\Release\netcoreapp2.1\CC.Serilog.AppCenter.dll" target="lib\netcoreapp2.1" />
+        <file src="bin\Release\netstandard2.1\CC.Serilog.AppCenter.dll" target="lib\netstandard2.1" />
     </files>
 </package>
