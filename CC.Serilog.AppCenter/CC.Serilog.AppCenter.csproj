@@ -8,7 +8,10 @@
         <Authors>CodeChem</Authors>
         <Description>Serilog Sink for AppCenter Exception Logging</Description>
         <Copyright>CodeChem</Copyright>
-        <PackageTags>xamarin, appcenter, serilog, serilog sink</PackageTags>
+        <PackageTags>xamarin, appcenter, serilog, sink</PackageTags>
+        <PackageProjectUrl>https://github.com/codechem/CC.Serilog.AppCenter</PackageProjectUrl>
+        <PackageLicenseUrl>https://github.com/codechem/CC.Serilog.AppCenter/blob/master/LICENSE</PackageLicenseUrl>
+        <RepositoryUrl>https://github.com/codechem/CC.Serilog.AppCenter</RepositoryUrl>
     </PropertyGroup>
 
     <ItemGroup>

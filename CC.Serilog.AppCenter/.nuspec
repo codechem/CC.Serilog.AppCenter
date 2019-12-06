@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<package >
+    <metadata>
+        <id>CC.Serilog.AppCenter</id>
+        <title>CC.Serilog.AppCenter</title>
+        <version>1.0.0</version>
+        <authors>Lazar Nikolov</authors>
+        <owners>CodeChem</owners>
+        <license type="expression">MIT</license>
+        <projectUrl>https://github.com/codechem/CC.Serilog.AppCenter</projectUrl>
+        <repository type="git" url="https://github.com/codechem/CC.Serilog.AppCenter" branch="master"/>
+        <description>Serilog Sink for AppCenter Exception Logging</description>
+        <summary>Serilog Sink for AppCenter Exception Logging</summary>
+        <copyright>© CodeChem. All rights reserved.</copyright>
+        <tags>xamarin serilog appcenter microsoft sink</tags>
+        <dependencies>
+            <group>
+                <dependency id="Microsoft.AppCenter" version="2.6.2"/>
+                <dependency id="Microsoft.AppCenter.Crashes" version="2.6.2"/>
+                <dependency id="Serilog" version="2.9.0"/>
+            </group>
+        </dependencies>
+    </metadata>
+    <files>
+        <file src="bin\Release\netcoreapp2.1\CC.Serilog.AppCenter.dll" target="lib\netcoreapp2.1" />
+    </files>
+</package>
