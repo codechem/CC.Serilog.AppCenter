@@ -1,0 +1,20 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <OutputType>Exe</OutputType>
+        <TargetFramework>netcoreapp2.1</TargetFramework>
+        <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+        <Title>Serilog AppCenter Sink</Title>
+        <Authors>CodeChem</Authors>
+        <Description>Serilog Sink for AppCenter Exception Logging</Description>
+        <Copyright>CodeChem</Copyright>
+        <PackageTags>xamarin, appcenter, serilog, serilog sink</PackageTags>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <PackageReference Include="Microsoft.AppCenter" Version="2.6.2" />
+      <PackageReference Include="Microsoft.AppCenter.Crashes" Version="2.6.2" />
+      <PackageReference Include="Serilog" Version="2.9.0" />
+    </ItemGroup>
+
+</Project>
