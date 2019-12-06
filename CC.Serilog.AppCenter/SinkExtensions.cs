@@ -2,8 +2,6 @@ using System;
 using Serilog;
 using Serilog.Configuration;
 using Serilog.Events;
-using Microsoft.AppCenter;
-using Microsoft.AppCenter.Crashes;
 
 namespace CC.Serilog.AppCenter
 {
@@ -13,7 +11,7 @@ namespace CC.Serilog.AppCenter
             this LoggerSinkConfiguration loggerConfiguration,
             string appCenterSecret,
             IFormatProvider formatProvider = null,
-            LogEventLevel logEventLevel = LogEventLevel.Information,
+            LogEventLevel minimumLogLevel = LogEventLevel.Information,
             params Type[] types)
         {
             if (!string.IsNullOrEmpty(appCenterSecret))
@@ -21,7 +19,7 @@ namespace CC.Serilog.AppCenter
                 Microsoft.AppCenter.AppCenter.Start(appCenterSecret, types);
             }
             
-            return loggerConfiguration.Sink(new Sink(formatProvider, logEventLevel));
+            return loggerConfiguration.Sink(new Sink(formatProvider, minimumLogLevel));
         }
     }
 }
