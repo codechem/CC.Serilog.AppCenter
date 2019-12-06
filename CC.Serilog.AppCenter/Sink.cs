@@ -12,18 +12,20 @@ namespace CC.Serilog.AppCenter
     public class Sink : ILogEventSink
     {
         private readonly IFormatProvider _formatProvider;
-        private readonly LogEventLevel _logEventLevel;
+        private readonly LogEventLevel _minimumLogLevel;
         
         public Sink(
             IFormatProvider formatProvider,
-            LogEventLevel logEventLevel)
+            LogEventLevel minimumLogLevel)
         {
             _formatProvider = formatProvider;
-            _logEventLevel = logEventLevel;
+            _minimumLogLevel = minimumLogLevel;
         }
         
         public void Emit(LogEvent logEvent)
         {
+            if (logEvent.Level < _minimumLogLevel) return;
+
             var properties = new Dictionary<string, string>
             {
                 { "level", logEvent.Level.ToString() },
